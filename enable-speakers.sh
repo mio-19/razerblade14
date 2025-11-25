@@ -1,22 +1,23 @@
+set -euxo pipefail
 card0="/sys/class/sound/hwC0D0/chip_name"
 card1="/sys/class/sound/hwC1D0/chip_name"
 card2="/sys/class/sound/hwC2D0/chip_name"
 card3="/sys/class/sound/hwC3D0/chip_name"
 
 if [ -f "$card0" ]; then
-  card0_codec=$(/usr/bin/cat "$card0")
+  card0_codec=$(cat "$card0")
 fi
 
 if [ -f "$card1" ]; then
-  card1_codec=$(/usr/bin/cat "$card1")
+  card1_codec=$(cat "$card1")
 fi
 
 if [ -f "$card2" ]; then
-  card2_codec=$(/usr/bin/cat "$card2")
+  card2_codec=$(cat "$card2")
 fi
 
 if [ -f "$card3" ]; then
-  card3_codec=$(/usr/bin/cat "$card3")
+  card3_codec=$(cat "$card3")
 fi
 
 codec_name="ALC298"
