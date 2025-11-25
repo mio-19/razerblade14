@@ -1,4 +1,3 @@
-set -euxo pipefail
 card0="/sys/class/sound/hwC0D0/chip_name"
 card1="/sys/class/sound/hwC1D0/chip_name"
 card2="/sys/class/sound/hwC2D0/chip_name"
